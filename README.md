@@ -2,6 +2,14 @@
 
 Parses basic SQL queries into a Haxe enum structure.
 
+## Install
+
+```
+haxelib install heaps-svg-lite
+```
+
+## Usage
+
 ```haxe
 
         switch new SqlParser().parse("SELECT * FROM my_table")[0] {
