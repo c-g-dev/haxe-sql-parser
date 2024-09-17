@@ -1,4 +1,4 @@
-#Haxe SQL Parser
+# Haxe SQL Parser
 
 Parses basic SQL queries into a Haxe enum structure.
 
