@@ -5,7 +5,7 @@ Parses basic SQL queries into a Haxe enum structure.
 ## Install
 
 ```
-haxelib install heaps-svg-lite
+haxelib install hx-sql-parser
 ```
 
 ## Usage
