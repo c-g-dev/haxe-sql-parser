@@ -1,6 +1,6 @@
 {
     "name": "hx-sql-parser",
-    "url" : "https://github.com/cgdev/haxe-sql-parser",
+    "url" : "https://github.com/c-g-dev/haxe-sql-parser",
     "description": "SQL lexer/parser for Haxe core",
     "license": "MIT",
     "tags": [

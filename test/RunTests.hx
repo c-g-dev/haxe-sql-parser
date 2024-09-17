@@ -1,5 +1,6 @@
 package test;
 
+import hxsqlparser.SqlParser;
 import haxe.EnumTools;
 import hxsqlparser.SqlLexer;
 import hxsqlparser.SqlCommandParse;
@@ -15,6 +16,17 @@ class RunTests {
         testCreateTable();
         testAlterTable();
         testDropTable();
+
+        switch new SqlParser().parse("SELECT * FROM my_table")[0] {
+            case Select(fields, fromClause, whereClause):
+            case Update(table, setFields, whereClause):
+            case Insert(table, fieldNames, insertValue):
+            case Delete(table, whereClause):
+            case CreateTable(table, fields):
+            case AlterTable(table, alters):
+            case DropTable(table):
+        }
+
         trace("All tests passed successfully.");
     }
 
