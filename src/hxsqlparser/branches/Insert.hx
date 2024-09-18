@@ -25,21 +25,18 @@ class Insert {
         var fields: Array<Field> = [];
 
         token = parser.peekToken();
-        if (!token.match(Token.POpen)) {
-            throw "Expected (";
-        }
-
-        while(!token.match(Token.PClose)) {
-            token = parser.nextToken();
-            switch token {
-                case Ident(s):{
-                    fields.push({table: "", field: s, all: false});
+        if (token.match(Token.POpen)) {
+            while(!token.match(Token.PClose)) {
+                token = parser.nextToken();
+                switch token {
+                    case Ident(s):{
+                        fields.push({table: "", field: s, all: false});
+                    }
+                    default:
                 }
-                default:
             }
+    
         }
-
-
 
         var insertValue = parseInsertValue(parser);
 
